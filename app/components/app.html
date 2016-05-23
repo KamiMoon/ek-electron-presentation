@@ -1,0 +1,8 @@
+<h3>Open directly</h3>
+<ul>
+    <li ng-repeat="link in $ctrl.linkOptions"><a href="#/{{link.url}}">{{link.title}}</a></li>
+</ul>
+<h3>Open in new Window</h3>
+<ul>
+    <li ng-repeat="link in $ctrl.linkOptions" ng-click="$ctrl.openWindow(link)">{{link.title}}</li>
+</ul>

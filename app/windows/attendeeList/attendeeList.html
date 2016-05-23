@@ -1,0 +1,6 @@
+<div ng-repeat="user in vm.attendeeList">
+    {{user.name}}
+    <button ng-click="vm.remove($index, user.name)">Remove</button>
+</div>
+<div droppable drop="vm.handleDrop" style="width: 200px; height: 200px; border: 5px solid red;">
+</div>
