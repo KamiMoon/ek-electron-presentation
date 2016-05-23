@@ -1,6 +1,6 @@
 /**
     Eric Kizaki, 2016
-    AngularJS wrapper service over Electron render process
+    AngularJS wrapper service over Electron render process.
 
     Requires that the main process has code to respond to these events.
     See main.js.
@@ -15,17 +15,18 @@
 
     angular.module('ek-angular-electron').service('RenderProcess', function() {
 
-        this.openWindow = function(options) {
-            ipc.send('openWindow', options);
-        };
+    this.openWindow = function(options) {
+        ipc.send('openWindow', options);
+    };
 
-        this.broadcastToAllWindows = function(key, value) {
-            ipc.send('broadcastToAllWindows', key, value);
-        };
+    this.broadcastToAllWindows = function(key, value) {
+        ipc.send('broadcastToAllWindows', key, value);
+    };
 
-        this.on = function(event, callback) {
-            ipc.on(event, callback);
-        };
-    });
+    this.on = function(event, callback) {
+        ipc.on(event, callback);
+    };
+});
+
 
 })();

@@ -1,9 +1,15 @@
+/**
+    Eric Kizaki, 2016
+    HTML5 drag and drop based off:
+    https://parkji.co.uk/2013/08/11/native-drag-and-drop-in-angularjs.html
+
+    Modified by Eric Kizaki 2016 to NOT appendChild - only pass data
+**/
 (function() {
 
     'use strict';
 
-    // https://parkji.co.uk/2013/08/11/native-drag-and-drop-in-angularjs.html
-    // Modified by Eric Kizaki 2016
+
     angular.module('dragDrop', []);
 
     angular.module('dragDrop').directive('draggable', function() {
